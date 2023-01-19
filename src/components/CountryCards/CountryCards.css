@@ -1,7 +1,32 @@
-.cardContainer {
-  display: grid;
+.card-container {
+  background-color: lightgray;
+  display: flex;
+  border: 5px solid black;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  margin: 20px;
 }
 
-p {
+.flag {
+  width: 50px;
+  height: 30px;
+  margin: auto;
+}
+
+.name {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.iso {
   font-size: large;
+}
+
+.local {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.continent {
+
 }
