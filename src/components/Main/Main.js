@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import CountryCards from '../CountryCards/CountryCards.js';
 import Search from '../Search/Search.js';
-import { useCountries } from '../../hooks/useCountries.js';
+import { useCountries, error } from '../../hooks/useCountries.js';
 import './Main.css';
 
 export default function Main() {
-  const countries = useCountries();
+  const { countries, error } = useCountries();
 
   const [filter, setFilter] = useState('All');
 
@@ -31,6 +31,7 @@ export default function Main() {
       <div className='countries-container'>
         {filterHandler(filter)}
       </div>
+      {error}
     </>
   );
 }
