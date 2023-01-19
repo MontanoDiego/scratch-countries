@@ -9,26 +9,25 @@ export default function Main() {
 
   const [filter, setFilter] = useState('All');
 
-  const defaultDisplay = countries.map((country) => (
-    <CountryCards key={country.id} {...country} />
-  ));
+  
 
 
-  function filterHandler(D) {
-    if (D === 'All') {
-      return defaultDisplay;
-    } else {
-      const filteredDisplay = filter.map((country) => (
+  function filterHandler(data) {
+    if (data === 'All') {
+      return countries.map((country) => (
         <CountryCards key={country.id} {...country} />
       ));
-      return filteredDisplay;
+    } else {
+      return filter.map((country) => (
+        <CountryCards key={country.id} {...country} />
+      ));
     }
   }
 
   return (
     <>
       <h1>Countries of the World!</h1>
-      <Search filter={filter} setFilter={setFilter} />
+      <Search setFilter={setFilter} />
       <div className='countries-container'>
         {filterHandler(filter)}
       </div>
