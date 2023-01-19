@@ -10,7 +10,12 @@ export default function Search({ filter, setFilter }) {
   const continents = ['All', 'North America', 'Africa', 'Asia', 'Oceania', 'South America', 'Antarctica', 'Europe'];
 
   const handleFilterSelect = (e) => {
-    setOption(e.target.value);
+    setOption(e.target.value);  
+  };
+
+  const handleFilterChange = () => {
+    const filteredData = countries.filter(country => country.continent === option || option === 'All');
+    setFilter(filteredData);
   };
 
   return (
@@ -20,6 +25,7 @@ export default function Search({ filter, setFilter }) {
           <option key={continent} value={continent} > {continent} </option>
         ))}
       </select>
+      <button onClick={handleFilterChange}>Search!</button>
     </div>
   );
 }
