@@ -1,7 +1,7 @@
 import React from 'react';
 import './CountryCards.css';
 
-export default function CountryCards({ name, iso2, iso3, local_name, continent }) {
+export default function CountryCards({ name, iso2, local_name, continent }) {
   return (
     <div className='card-container'>
       <img src={`https://flagcdn.com/w80/${iso2.toLowerCase()}.png`} alt={name} className='flag'></img>
