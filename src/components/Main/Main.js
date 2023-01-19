@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import CountryCards from '../CountryCards/CountryCards.js';
 import Search from '../Search/Search.js';
-import { useCountries, error } from '../../hooks/useCountries.js';
+import { useCountries } from '../../hooks/useCountries.js';
 import './Main.css';
 
 export default function Main() {
